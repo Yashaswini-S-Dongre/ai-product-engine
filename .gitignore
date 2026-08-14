@@ -1,0 +1,25 @@
+# Virtual Environments
+venv/
+env/
+
+# Environment Variables & Secrets
+.env
+.env.*
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases
+*.db
+*.sqlite3
+industrial_pim.db
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashesindustrial_pim.db
+*.db

@@ -1,0 +1,72 @@
+{
+    "category_map": {
+        "pump": "Pumps & Fluid Handling",
+        "valve": "Valves & Actuators",
+        "motor": "Motors & Drives",
+        "drive": "Motors & Drives",
+        "filter": "Filtration Systems",
+        "sensor": "Sensors & Instrumentation",
+        "bearing": "Bearings & Power Transmission",
+        "seal": "Seals & Gaskets",
+        "gasket": "Seals & Gaskets",
+        "compressor": "Compressors & Pneumatics",
+        "conveyor": "Material Handling",
+        "heat exchanger": "Heat Transfer Equipment"
+    },
+    "regex_patterns": {
+        "sku": "(?:SKU|Part Number|Model|MODEL)[\\s:]*([A-Za-z0-9\\-]+)",
+        "product_name": "(?:Product(?: Name)?|Item)[\\s:]*([A-Za-z0-9\\-\\s]+?)(?=\\n|$|MFG|Manufacturer|SKU)",
+        "manufacturer": "(?:MFG|Manufacturer|Brand)[\\s:]*([A-Za-z0-9\\-\\s]+)",
+        "flow_rate": "(?:Max )?Flow Rate[\\s:]*([0-9\\.]+\\s*(?:GPM|LPM|m3/h|m³/h))",
+        "material": "Material[\\s:]*([A-Za-z0-9\\-\\s]+)",
+        "weight": "Weight[\\s:]*([0-9\\.]+\\s*(?:lbs|kg))"
+    },
+    "core_extraction_fields": [
+        "sku",
+        "product_name",
+        "manufacturer",
+        "flow_rate",
+        "material",
+        "weight"
+    ],
+    "bonus_extraction_fields": [
+        "operating_temp",
+        "pressure_rating",
+        "power_rating",
+        "category"
+    ],
+    "gemini_model": "gemini-3.6-flash",
+    "ui_colors": {
+        "primary_gradient_start": "#2563EB",
+        "primary_gradient_end": "#1D4ED8",
+        "hover_border": "rgba(37, 99, 235, 0.3)",
+        "hover_shadow": "rgba(37, 99, 235, 0.5)",
+        "input_focus_shadow": "rgba(37, 99, 235, 0.15)",
+        "chart_red": "#EF4444",
+        "chart_orange": "#F59E0B",
+        "chart_green": "#10B981",
+        "chart_blue": "#3B82F6",
+        "chart_purple": "#8B5CF6",
+        "status_ai_enriched_bg": "rgba(16, 185, 129, 0.15)",
+        "status_ai_enriched_text": "#10B981",
+        "status_pending_bg": "rgba(245, 158, 11, 0.15)",
+        "status_pending_text": "#F59E0B"
+    },
+    "confidence_bins": [
+        "Low (< 50%)",
+        "Medium (50-80%)",
+        "High (> 80%)"
+    ],
+    "default_threshold": 0.5,
+    "navigation": [
+        "Dashboard",
+        "Ingestion",
+        "Catalog",
+        "System Logs"
+    ],
+    "export_files": {
+        "csv": "catalog.csv",
+        "json": "catalog.json",
+        "excel": "catalog.xlsx"
+    }
+}
